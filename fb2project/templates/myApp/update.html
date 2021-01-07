@@ -1,0 +1,19 @@
+<html lang="en">
+    {%extends 'myApp/parent.html'%}
+
+<body>
+    {%block for_child%}
+    <h1>updation form</h1>
+    <form method="post">
+        Sno:<input type="text" name="sno" value="{{std.sno}}"><br><br>
+        Sname:<input type="text" name="sname" value="{{std.sname}}"><br><br>
+        Smarks:<input type="text" name="smarks" value="{{std.smarks}}"><br><br>
+        Sadrr:<input type="text" name="saddr" value="{{std.saddr}}"><br><br>
+        {%csrf_token%}
+        <input type="submit" class="btn btn-lg btn-primary" value="submit">
+    </form>
+    {%endblock%}
+
+    
+</body>
+</html>
